@@ -15,7 +15,7 @@ elseif game.PlaceId == 6558526079 then
 end
 
 local var, err = pcall(function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/rollin-dev/script/main/" .. name .. ".lua"))()
+  loadstring(game:HttpGet("https://raw.githubusercontent.com/rollin-dev/roblox-script/main/" .. name .. ".lua"))()
 end)
 
 if var == false then
