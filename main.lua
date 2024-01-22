@@ -10,7 +10,7 @@ if game.PlaceId == 8304191830 or game.PlaceId == 8349889591 then
   name = "aa"
 elseif game.PlaceId == 8737899170 then
   name = "pet99"
-elseif game.PlaceId == 6558526079 then
+elseif game.PlaceId == 6558526079 or game.PlaceId == 6593190090 then
   name = "awtd"
 end
 
