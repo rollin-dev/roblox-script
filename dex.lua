@@ -1446,6 +1446,10 @@ local function main()
 				elseif parObj == game and API.Classes[className] and API.Classes[className].Tags.Service then
 					indexName = ':GetService("'..className..'")'
 				end
+			elseif parObj == nil then
+				local getnil = "local getNil = function(name, class) for _, v in next, getnilinstances() do if v.ClassName == class and v.Name == name then return v end end end"
+				local gotnil = "\n\ngetNil(\"%s\", \"%s\")"
+				indexName = getnil .. gotnil:format(curObj.Name, className)
 			end
 
 			path = indexName..path
@@ -4342,7 +4346,7 @@ local function main()
                         end
                     end
                     for _, _function in pairs(getgc()) do
-                        if getfenv(_function).script and getfenv(_function).script == PreviousScr and typeof(_function) == "function" then
+                        if typeof(_function) == "function" and getfenv(_function).script and getfenv(_function).script == PreviousScr then
                             functions:dump_function(_function, 0)
                             functions:add_to_dump("\n" .. ("="):rep(100), 0, false)
                         end
@@ -6112,7 +6116,7 @@ local function main()
 			if not silent then
 				side.Hidden = false
 			end
-			updateWindows(silent)
+			-- updateWindows(silent)
 		end
 
 		funcs.Close = function(self)
